@@ -50,11 +50,11 @@ public class Main {
 		// Create and print list of movies
 		System.out.println("Choose Movie:");
 		List<String> movieList = new ArrayList<String>();
-		movieList.add("1. Finding Nemo");
+		movieList.add("1. Black Widow");
 		movieList.add("2. Parasite");
-		movieList.add("3. Anabelle");
-		movieList.add("4. Charlie's Angels");
-		movieList.add("5. The Terminal");
+		movieList.add("3. A Quiet Place");
+		movieList.add("4. Mulan");
+		movieList.add("5. Artemis Fowl");
 		for(int i = 0; i < movieList.size(); i++) {
 			System.out.println(movieList.get(i));
 		}
@@ -64,7 +64,24 @@ public class Main {
 		String movieName = movieList.get(movieChoice-1);
 		
 		// Print chosen movie
-		System.out.println("You have chosen " + movieName.substring(3));
+		System.out.println("You have chosen " + movieName.substring(3) + " at " + theater.getTheaterName().substring(3));
+		System.out.println();
+		
+		// BOOKING
+		
+		// Selecting seats
+		System.out.println("Number of Seats: ");
+		int seats = scan.nextInt();
+		System.out.println("Seat Type: ");
+		String seatType = scan.nextLine();
+		
+		// Create BookSeats object
+		
+		BookSeats booking = new BookSeats(1, 101, 12, seats, seatType);
+		System.out.println();
+		System.out.println("You have booked " + booking.getSeatType() + booking.getNumberOfSeats() + 
+				(booking.getNumberOfSeats()>1 || booking.getNumberOfSeats() == 0? " seats" : " seat"));
+			
 	}
-
+	
 }
