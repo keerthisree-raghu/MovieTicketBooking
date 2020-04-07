@@ -1,5 +1,7 @@
 package movieticketbooking;
 
+//import java.util.*;
+
 /**
  * Booking Seats at the Theater
  */
@@ -31,7 +33,7 @@ public class BookSeats {
 		this.numberOfSeats = seats;
 		this.seatType = seatType;
 	}
-
+	
 	// userId
 	
 	public int getUserId() {

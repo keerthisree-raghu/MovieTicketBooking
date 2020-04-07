@@ -13,7 +13,7 @@ public class Theater {
 	private int theaterId;
 	private String theaterName;
 	private String location;
-	private List<Movie> movies;
+	private List<String> movies;
 	
 	/**
 	 * Theater class constructor
@@ -22,11 +22,9 @@ public class Theater {
 	 * @param location - Location or address of theater
 	 * @param movies - Movies currently showing at the theater
 	 */
-	public Theater(int theaterId, String theaterName, String location, List<Movie> movies) {
+	public Theater(int theaterId, String theaterName) {
 		this.theaterId = theaterId;
 		this.theaterName = theaterName;
-		this.location = location;
-		this.movies = movies;
 	}
 	
 	// theaterId
@@ -58,10 +56,10 @@ public class Theater {
 
 	// movies
 	
-	public List<Movie> getMovies() {
+	public List<String> getMovies() {
 		return movies;
 	}
-	public void setMovies(List<Movie> movies) {
+	public void setMovies(List<String> movies) {
 		this.movies = movies;
 	}
 	
