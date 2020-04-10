@@ -54,6 +54,7 @@ public class User extends Movie {
 				+ "\nName: " + name 
 				+ "\nMovie: " + getMovieName().substring(3) 
 				+ "\nTheater: " + getTheaterName().substring(3)
+				+ "\nTickets: " + getNumberOfSeats()
 				+ "\nAmount: Rs. " + getBillAmount();
 	}
 	
