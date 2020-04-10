@@ -51,6 +51,7 @@ public class Movie extends Bill {
 		System.out.println("You have chosen " + movieName.substring(3) + ".");
 	}
 	
+	// Selecting Seats
 	public void selectSeats() {		
 		System.out.println("Number of Seats:");
 		numberOfSeats = scan.nextInt();
@@ -62,12 +63,9 @@ public class Movie extends Bill {
 		}
 		else {
 			System.out.println("You have selected " + numberOfSeats +
-					(numberOfSeats > 1 || numberOfSeats == 0? " seats." : " seat."));
-			System.out.println();
+					(numberOfSeats > 1 || numberOfSeats == 0? " seats.\n" : " seat.\n"));
 			generateBill(numberOfSeats);
-			
-			System.out.println();
-			System.out.println(totalNumberOfSeats + " seats are left.");
+			System.out.println("\n" + totalNumberOfSeats + " seats are left.");
 		}		
 	}
 	

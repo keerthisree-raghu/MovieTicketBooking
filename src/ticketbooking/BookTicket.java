@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class BookTicket extends Movie {
 	static Scanner scan = new Scanner(System.in);
-	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -19,17 +19,12 @@ public class BookTicket extends Movie {
 		user1.selectSeats();
 		System.out.println();
 		
+		System.out.println(user1.toString());;
+		System.out.println();
+		
 		user1.makePayment();
 		System.out.println();
 		
-		System.out.println("Press 0 to exit.\n"
-				+ "Press 1 to continue booking.");
-		
-		// To edit
-		int choice = scan.nextInt();
-		switch(choice) {
-		case 0: System.exit(1);
-		}
 	}
 
 }

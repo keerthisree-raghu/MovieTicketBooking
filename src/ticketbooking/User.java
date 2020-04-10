@@ -14,12 +14,8 @@ public class User extends Movie {
 	
 	// Constructor: Prompts user to enter the required details
 	public User() {
-		
 		getUserDetails();
-		
-		System.out.println();
-		System.out.println("Hello, " + name + "!");
-		System.out.println();
+		System.out.println("\nHello, " + name + "!\n");
 	}
 	
 	// User Details
@@ -49,6 +45,16 @@ public class User extends Movie {
 		System.out.println("Enter amount to pay:");
 		amountPaid = scan.nextDouble();
 		validatePayment(amountPaid);
+	}
+	
+	// Show Details
+	public String toString() {
+		return "BOOKING SUMMARY"
+				+ "\n--------------------------" 
+				+ "\nName: " + name 
+				+ "\nMovie: " + getMovieName().substring(3) 
+				+ "\nTheater: " + getTheaterName().substring(3)
+				+ "\nAmount: Rs. " + getBillAmount();
 	}
 	
 	// Get and Set Methods for Mobile Number and Email ID
