@@ -8,7 +8,7 @@ public class Movie extends Bill {
 	private int numberOfSeats;
 	
 	Scanner scan = new Scanner(System.in);
-	private int totalNumberOfSeats = 300;
+	private static int totalNumberOfSeats = 300;
 	
 	// Selecting Movie Theater
 	public void selectTheater() {
@@ -24,7 +24,7 @@ public class Movie extends Bill {
 			System.out.println(theaterList.get(i));
 		}
 		
-		// Ask the user for their choice of theater
+		// Get user's theater choice
 		int theaterChoice = scan.nextInt();
 		theaterName = theaterList.get(theaterChoice-1);
 		
@@ -51,7 +51,7 @@ public class Movie extends Bill {
 			System.out.println(movieList.get(i));
 		}
 		
-		// Ask the user for their choice
+		// Get user's movie choice
 		int movieChoice = scan.nextInt();
 		movieName = movieList.get(movieChoice-1);
 		
@@ -71,12 +71,13 @@ public class Movie extends Bill {
 		else {
 			System.out.println("You have selected " + numberOfSeats +
 					(numberOfSeats > 1 || numberOfSeats == 0? " seats.\n" : " seat.\n"));
+			// Generate bill based on the number of seats selected
 			generateBill(numberOfSeats);
 			System.out.println("\n" + totalNumberOfSeats + " seats are left.");
 		}		
 	}
 	
-	// To access attributes in parent class
+	// Get and set methods
 	public String getTheaterName() {
 		return theaterName;
 	}
@@ -88,4 +89,17 @@ public class Movie extends Bill {
 	public int getNumberOfSeats() {
 		return numberOfSeats;
 	}
+	
+	public void setTheaterName(String theaterName) {
+		this.theaterName = theaterName;
+	}
+
+	public void setMovieName(String movieName) {
+		this.movieName = movieName;
+	}
+
+	public void setNumberOfSeats(int numberOfSeats) {
+		this.numberOfSeats = numberOfSeats;
+	}
+
 }

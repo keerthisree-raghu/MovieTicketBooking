@@ -3,12 +3,12 @@ package ticketbooking;
 import java.util.*;
 
 public class User extends Movie {
+	
 	private String name;
 	private String mobileNumber;
 	private String emailId;
 	private int userId;
 	private static int id = 1;
-	private double amountPaid = 0.0;
 
 	Scanner scan = new Scanner(System.in);
 	
@@ -34,24 +34,17 @@ public class User extends Movie {
 		System.out.println();
 		System.out.println("User ID: " + userId);
 	}
-	
+
 	// Generate User ID
 	private void setUserId() {
 		this.userId = id++;
 	}
 	
-	// Make Payment
-	public void makePayment() {
-		System.out.println("Enter amount to pay:");
-		amountPaid = scan.nextDouble();
-		validatePayment(amountPaid);
-	}
-	
 	// Show Details
-	public String toString() {
+	public String showDetails() {
 		return "BOOKING SUMMARY"
 				+ "\n--------------------------" 
-				+ "\nName: " + name 
+				+ "\nName: " + name
 				+ "\nMovie: " + getMovieName().substring(3) 
 				+ "\nTheater: " + getTheaterName().substring(3)
 				+ "\nTickets: " + getNumberOfSeats()

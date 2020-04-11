@@ -4,12 +4,20 @@ import java.util.*;
 
 public class Bill {
 	Scanner scan = new Scanner(System.in);
-	private static double billAmount = 0.0;
+	private double billAmount = 0.00;
+	private double amountPaid = 0.00;
 	
 	// Generate bill based on number of seats selected
 	public void generateBill(int seats) {
 		billAmount = seats * 120;
 		System.out.println("Total Amount = Rs. " + billAmount);
+	}
+	
+	// Make Payment
+	public void makePayment() {
+		System.out.println("Enter amount to pay:");
+		amountPaid = scan.nextDouble();
+		validatePayment(amountPaid);
 	}
 
 	// Validate Payment
